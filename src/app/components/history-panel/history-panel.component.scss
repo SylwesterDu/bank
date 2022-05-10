@@ -1,0 +1,65 @@
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //align-items: center;
+  justify-items: flex-start;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  color: #404040;
+  font-weight: 600;
+  margin-bottom: 15px;
+  width: 100%;
+
+  span {
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.transaction-list {
+  overflow-y: scroll;
+  height: 30vh;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.transaction {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0px;
+}
+
+.transaction-data {
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.transaction-type {
+  font-size: 18px;
+}
+
+.transaction-value {
+  font-size: 22px;
+}
+
+.balance {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.transaction-value-block {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}

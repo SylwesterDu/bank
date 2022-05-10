@@ -1,0 +1,50 @@
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+  color: #404040;
+  font-weight: 600;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.credit-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.balance-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.info {
+  margin-top: 30px;
+}
+
+span {
+  font-size: 20px;
+}
+
+.balance {
+  font-size: 34px;
+  color: black;
+  font-family: 'jaldi';
+}
+
+img {
+  width: 40%;
+  height: 40%;
+}

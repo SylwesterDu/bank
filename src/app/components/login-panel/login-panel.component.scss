@@ -1,0 +1,108 @@
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex: 1;
+  height: 100vh;
+  background-color: rgba($color: #f0ffff, $alpha: 0.5);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  z-index: 1;
+}
+
+.login-panel {
+  z-index: 2;
+  left: auto;
+  right: auto;
+  width: 500px;
+  height: 470px;
+  //max-width: 800px;
+  //max-height: 600px;
+  background-color: #F0F0F0;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 10px 4px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 3px 3px 10px 4px rgba(66, 68, 90, 1);
+  box-shadow: 3px 3px 10px 4px rgba(66, 68, 90, 1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+  }
+
+  img {
+    margin-top: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    height: 40px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: 1px solid #707070;
+    font-size: 16pt;
+    letter-spacing: 1px;
+    padding-left: 10px;
+  }
+
+  input:focus {
+    outline: 2px solid #0075FF;
+  }
+
+  .login-btn {
+    height: 40px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #0075FF;
+    color: white;
+    font-size: 18pt;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-btn:hover {
+    background-color: #3095FF;
+    transition-duration: 200ms;
+  }
+
+  .loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .error-text {
+    color: red;
+    font-size: 14px;
+  }
+
+}

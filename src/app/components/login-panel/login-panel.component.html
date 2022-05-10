@@ -1,0 +1,18 @@
+<div class="login-background" (click)="dispose()">
+  <div class="login-panel" (click)="$event.stopPropagation()">
+    <p>Zaloguj się do bankowości elektronicznej</p>
+    <img src="/assets/peopleWithLaptops.jpg" alt="people with laptops" srcset="">
+
+    <input  class="login" type="text" name="login" id="login" placeholder="Numer klienta">
+    <input  class="password" type="password" name="password" id="password" placeholder="Hasło">
+
+
+    <button (click)="login()" class="login-btn">
+      Zaloguj się
+      <div class="loader" *ngIf="tryToLog"></div>
+
+    </button>
+
+    <p class="error-text" *ngIf="error">{{errorMessage}}</p>
+  </div>
+</div>

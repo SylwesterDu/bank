@@ -1,0 +1,28 @@
+<p class="welcome-message">Historia transakcji</p>
+
+<div class="filter-menu">
+  <p class="info">wyświetl: </p>
+  <select name="filter" id="">
+    <option value="all">Wszystkie</option>
+    <option value="received">Przychodzące</option>
+    <option value="sent">Wychodzące</option>
+  </select>
+</div>
+<div class="content">
+  <div class="table-header">
+    <p>Data</p>
+    <p>Tytuł</p>
+    <p>Kwota</p>
+  </div>
+
+  <div class="transaction-list">
+    <div *ngFor="let transaction of transactions" class="transaction">
+      <div  class="transaction-details">
+        <p>{{transaction.date}}</p>
+        <p>{{transaction.title}}</p>
+        <p [style]="transaction.value > 0 ? 'color: green' : 'color: red'">{{transaction.value}} <span>PLN</span></p>
+      </div>
+
+    </div>
+  </div>
+</div>

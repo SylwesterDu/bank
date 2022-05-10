@@ -1,0 +1,146 @@
+.welcome-message {
+  font-size: 40px;
+  font-weight: 500;
+  color: #404040;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.form {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input {
+  border: none;
+  font-size: 28px;
+  padding: 0px 10px;
+  height: 50px;
+  outline: 2px solid #0075ff;
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  width: 90%;
+}
+
+.form-input {
+  p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #404040;
+    margin-bottom: 5px;
+  }
+
+  width: 45%;
+  min-width: 400px;
+  margin-top: 30px;
+  flex: auto;
+}
+
+.transfer-type-button {
+  outline: 2px solid #0075ff;
+  border-radius: 5px;
+  height: 50px;
+  width: 90%;
+  display: flex;
+  text-align: center;
+  justify-content: stretch;
+  justify-items: stretch;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.normal-transfer {
+  display: flex;
+  flex: 1;
+  height: 51px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.quick-transfer {
+  display: flex;
+  height: 50px;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+}
+
+input[type=button] {
+  color: white;
+  background-color: #0075ff;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  color: white;
+  background-color: #0075ff;
+  cursor: pointer;
+  background-color: #3095FF;
+  outline: 2px solid #3095ff;
+  transition-duration: 200ms;
+}
+
+.summary {
+  width: 60%;
+  height: 70vh;
+  min-height: 400px;
+  background-color: white;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 50px;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-box-shadow: 1px 1px 5px 1px rgb(143, 144, 149);
+  -moz-box-shadow: 1px 1px 5px 1px rgb(143, 144, 149, 1);
+  box-shadow: 1px 1px 5px 1px rgb(143, 144, 149, 1);
+  border-radius: 5px;
+}
+
+.summary-element {
+  width: 100%;
+
+  p:first-child {
+    color: #404040;
+    font-weight: 200;
+    font-size: 15px;
+  }
+
+  p:last-child {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.confirm-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  #sms-code {
+    width: 45%;
+  }
+
+  #confirm-button {
+    width: 45%;
+  }
+}
+
+#return-button {
+  width: 100%;
+  background-color: white;
+  color: #0075ff;
+}
+
+#return-button:hover {
+  background-color: #f0f5FF;
+  transition-duration: 200ms;
+}

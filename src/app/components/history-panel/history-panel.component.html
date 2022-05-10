@@ -1,0 +1,38 @@
+<div class="content">
+  <p>Ostatnie transakcje</p>
+
+  <div class="transaction-list">
+
+    <div class="transaction" *ngFor="let transaction of transactions">
+      <img src="assets/send.png" alt="">
+
+      <div class="transaction-data" *ngIf="transaction.value > 0">
+        <div>
+          <p class="from" style="font-weight: 300; margin:0px" >Od: <span>{{transaction.from}}</span></p>
+          <p class="transaction-type" >Przelew przychodzący</p>
+        </div>
+        <div class="transaction-value-block">
+          <p class="transaction-value" style="color: green; margin:0px">{{transaction.value.toFixed(2)}} USD</p>
+          <p class="balance">saldo: 1000.00</p>
+
+        </div>
+      </div>
+
+
+      <div class="transaction-data" *ngIf="transaction.value < 0">
+        <div>
+          <p class="from" style="font-weight: 300; margin:0px" >Do: <span>{{transaction.from}}</span></p>
+          <p class="transaction-type">Przelew wychodzący</p>
+        </div>
+        <div class="transaction-value-block">
+          <p class="transaction-value" style="color: red; margin:0px">{{transaction.value.toFixed(2)}} PLN</p>
+          <p class="balance">saldo: 1000.00</p>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

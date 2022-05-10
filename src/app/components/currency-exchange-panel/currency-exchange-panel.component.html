@@ -1,0 +1,72 @@
+<div class="content">
+  <p>Wymień waluty</p>
+
+  <div class="currency-input-container">
+    <input type="text" name="first-currency" class="currency-input">
+    <select class="change-currency">
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> USD
+      </option>
+
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> PLN
+      </option>
+
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> EUR
+      </option>
+
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> GBP
+      </option>
+
+    </select>
+  </div>
+
+
+
+  <div class="currency-input-container">
+    <input type="text" name="first-currency" class="currency-input">
+    <select class="change-currency">
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> PLN
+      </option>
+
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> PLN
+      </option>
+
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> EUR
+      </option>
+
+      <option>
+        <img src="assets/usaFlag.png" width="40px"> GBP
+      </option>
+
+    </select>
+  </div>
+
+  <div class="summary">
+
+    <div class="to-exchange">
+      <p>Wymienisz</p>
+
+      <p class="exchange-text">
+        {{toExchange.toFixed(2)}} USD
+
+      </p>
+    </div>
+
+    <div class="provision">
+      <p>Prowizja</p>
+      <p class="provision-text">
+        {{provision.toFixed(2)}} USD
+      </p>
+
+    </div>
+
+
+    <button class="confirm"> Wymień</button>
+  </div>
+</div>

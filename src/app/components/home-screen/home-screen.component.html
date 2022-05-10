@@ -1,0 +1,57 @@
+<div class="main">
+  <div class="nav-panel">
+    <img src="/assets/bankLogo.png" alt="logo" srcset="">
+
+    <nav class="nav-buttons-container">
+      <button class="nav-button" (click)="currentScreen = 0" [style]="currentScreen==0 ? 'background-color: #f0f0f0; color: #0075ff;':''">Strona główna</button>
+      <div class="separator"></div>
+      <button class="nav-button" (click)="currentScreen = 1" [style]="currentScreen==1 ? 'background-color: #f0f0f0; color: #0075ff;':''">Wykonaj przelew</button>
+      <button class="nav-button" (click)="currentScreen = 2" [style]="currentScreen==2 ? 'background-color: #f0f0f0; color: #0075ff;':''">Stan konta</button>
+      <button class="nav-button" (click)="currentScreen = 3" [style]="currentScreen==3 ? 'background-color: #f0f0f0; color: #0075ff;':''">Historia transakcji</button>
+      <button class="nav-button" (click)="currentScreen = 4" [style]="currentScreen==4 ? 'background-color: #f0f0f0; color: #0075ff;':''">Księga odbiorców</button>
+      <div class="separator"></div>
+      <button class="nav-button" routerLink="/">Wyloguj się</button>
+    </nav>
+
+  </div>
+  <div class="content">
+    <p class="welcome-message" *ngIf="currentScreen == 0">Witamy w Nordic Bank, Sylwester</p>
+
+    <div [ngSwitch]="currentScreen">
+      <div *ngSwitchCase="0">
+        <div class="panels-container">
+          <div class="panel">
+            <app-currency-exchange-panel></app-currency-exchange-panel>
+          </div>
+          <div class="panel">
+            <app-user-products-panel></app-user-products-panel>
+          </div>
+          <div class="panel">
+            <app-history-panel></app-history-panel>
+          </div>
+          <div class="panel">
+            <app-exchange-rate-graph></app-exchange-rate-graph>
+          </div>
+        </div>
+      </div>
+
+      <div *ngSwitchCase="1">
+        <app-make-transfer-screen></app-make-transfer-screen>
+      </div>
+
+      <div *ngSwitchCase="2">
+        <app-balance-screen></app-balance-screen>
+      </div>
+
+      <div *ngSwitchCase="3">
+        <app-history-screen></app-history-screen>
+      </div>
+
+      <div *ngSwitchCase="4">
+        <app-book-screen></app-book-screen>
+      </div>
+    </div>
+
+
+  </div>
+</div>

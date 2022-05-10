@@ -1,0 +1,91 @@
+<div class="content">
+  <p *ngIf="!formFilled" class="welcome-message">Wykonaj przelew</p>
+  <p *ngIf="formFilled" class="welcome-message">Upewnij się, że podałeś poprawne dane</p>
+
+
+  <div *ngIf="!formFilled" class="form">
+    <div class="form-input">
+      <p>Z konta</p>
+      <input type="text" name="from" id="from" placeholder="12 1234 1234 134 1234 1234 134">
+    </div>
+
+    <div class="form-input">
+      <p>Tytuł przelewu</p>
+      <input type="text" name="from" id="from" placeholder="">
+    </div>
+
+    <div class="form-input">
+      <p>Odbiorca</p>
+      <input type="text" name="from" id="from" placeholder="kliknij, by wybrać z listy">
+    </div>
+
+    <div class="form-input">
+      <p>Adres odbiorcy</p>
+      <input type="text" name="from" id="from" placeholder="Wpisz adres (opcjonalnie)">
+    </div>
+
+    <div class="form-input">
+      <p>Numer rachunku odbiorcy</p>
+      <input type="text" name="from" id="from" placeholder="xx xxxx xxxx xxxx xxxx">
+    </div>
+
+    <div class="form-input">
+      <p>typ przelewu</p>
+      <!-- <input type="button" name="from" id="from"> -->
+      <div class="transfer-type-button">
+        <div class="normal-transfer" (click)="normalTransfer = true" [style]="normalTransfer ? 'background-color: #0075ff; color: white' : 'background-color: #ffffff'">Przelew zwykły</div>
+        <div class="quick-transfer" (click)="normalTransfer = false" [style]="!normalTransfer ? 'background-color: #0075ff; color: white' : 'background-color: #ffffff'">przelew natychmiastowy</div>
+      </div>
+    </div>
+
+    <div class="form-input">
+      <p>Data wykonania</p>
+      <input type="date" name="from" id="from">
+    </div>
+
+
+    <div class="form-input">
+      <p>Z konta</p>
+      <input type="button" name="from" id="from" value="Przejdź do pdsumowania" (click)="formFilled=true">
+    </div>
+  </div>
+
+  <div *ngIf="formFilled" class="summary">
+    <div class="summary-element">
+      <p>Z konta</p>
+      <p>Konto oszczędnościowe (1200.00 PLN)</p>
+    </div>
+
+    <div class="summary-element">
+      <p>Na rachunek</p>
+      <p>12 12321 31213 23132 32113 13</p>
+    </div>
+
+    <div class="summary-element">
+      <p>Z konta</p>
+      <p>Konto oszczędnościowe (1200.00 PLN)</p>
+    </div>
+
+    <div class="summary-element">
+      <p>Kwota</p>
+      <p>200 PLN</p>
+    </div>
+
+    <div class="summary-element">
+      <p>Tytułem</p>
+      <p>tytuł przelewu</p>
+    </div>
+
+    <div class="summary-element">
+      <p>Data realizacji</p>
+      <p>01.01.2022</p>
+    </div>
+
+    <div class="confirm-panel">
+      <input type="text" id="sms-code" placeholder="Wpisz kod z sms">
+      <input type="button" id="confirm-button" value="Zatwierdź">
+    </div>
+
+    <input type="button" value="Wróć do formularza" id="return-button" (click)="formFilled = false">
+  </div>
+</div>
